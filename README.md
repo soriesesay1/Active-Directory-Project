@@ -132,8 +132,8 @@ Once login using your password, update the server with ‘sudo apt-get update &&
 
 ![image](https://github.com/user-attachments/assets/f1610546-9fe1-442c-b138-eb2adbde9a41)
 
-Part 3:
-We install and configure our softwares: Sysmon(Use for login purpose), Splunk(For alerts and telementry) as the most important of them all. 
+# Part 3:
+  We install and configure our softwares: Sysmon(Use for login purpose), Splunk(For alerts and telementry) as the most important of them all. 
 ![image](https://github.com/user-attachments/assets/031f6220-2150-4356-b0ba-2d3bcfe7bd9b)
 
 We put our network on the same network, select tools on the top and click on the 3 dots top right, and select network. In the ‘network’ select ‘NAT Networks’ and click on create and change the IP address.
@@ -141,46 +141,86 @@ We put our network on the same network, select tools on the top and click on the
 In virtualbox, we change the network from NAT to NAT Networks for Splunk and the rest of the machines.
 ![image](https://github.com/user-attachments/assets/d89ef5c6-0689-4483-a824-77f5f57248d4)
 
+My advice for this Lab is for you to download the Ubuntu Server 22 instead of 24 because when changing the network to static it would not WORK for some reason, I had to uninstall the 24 and install the 22 version before it worked.
+
+Firstly, to know your IP address type IP space a and click enter. You will see MyDFIR dashboard because I completed this part quickly because I thought it is not going to work again. 
+![image](https://github.com/user-attachments/assets/f7d549c7-bacc-4f67-ab56-4f25dbb10be8)
+
+To enter the NANO gnu network type in ‘sudo nano /etc/netplan/00-installer-config.yaml’ and hit enter.
+![image](https://github.com/user-attachments/assets/ead14ed3-9d7c-4bab-bd6a-b9f14dbcd716)
+
+In the NANO system, your network settings should look like this below. And to save the settings, press Ctrl+X, and then Y and hit enter to save the network settings. And type ‘sudo netplan apply’ to apply the settings
+![image](https://github.com/user-attachments/assets/0702b568-5cd9-4d9b-b76a-9ee98a0cc2ea)
+
+You will have a screen like this when applying the network settings
+![image](https://github.com/user-attachments/assets/f33f171b-fbff-47f6-9faf-606026855f3d)
+
+Verify if the static IP was successful by typing ip space a and hit enter.
+![image](https://github.com/user-attachments/assets/9f60adbb-a864-4443-b8e9-78bd2a57f838)
+
+Splunk:
+
+If you already have a splunk account fine and just sign in and if not sign up and login. Inside splunk, hover on ‘Products’ and scroll down and click ‘Free Trials & Downloads’
+![image](https://github.com/user-attachments/assets/19922e69-3398-4d38-935d-e8c739435f7c)
+
+Select ‘Get My Free Trial’ under Splunk Enterprise
+![image](https://github.com/user-attachments/assets/e34449b9-9dc2-405d-9eb1-608a268e6984)
+
+Select the Linux Package and download the ‘.deb’ file.
+![image](https://github.com/user-attachments/assets/17992aba-f6fc-4be9-8a28-dec9ab6e9898)
+
+Install virtualbox guest
+![image](https://github.com/user-attachments/assets/f5d239aa-f5bc-438c-8f1a-0e1894657068)
+
+# Shared Folder:
+To access the shared folder, we go to device at the top and scroll down to ‘Shared Folder’ and select ‘Shared Folder Settings’
+![image](https://github.com/user-attachments/assets/ec88c04b-ed4c-41cb-8cd7-787bf35824b1)
+
+Once inside, do the following below. For the Path, select where you save your splunk download file.
+![image](https://github.com/user-attachments/assets/b7c5dab6-0477-4554-b2ea-c22238a61d84)
+
+Directory Created
+![image](https://github.com/user-attachments/assets/967674ca-e02e-44b8-8916-6e2cad8046a9)
+![image](https://github.com/user-attachments/assets/59536573-072a-408d-b452-fafd5df68c84)
+![image](https://github.com/user-attachments/assets/e32348ad-7e3b-49d1-9dd3-379a06154525)
+![image](https://github.com/user-attachments/assets/142f0a3c-dea8-4367-a0ff-42d0f08272c6)
 
 
+# Windows 10:
+On windows, we rename the name to target-PC and set a static IP address.
+![image](https://github.com/user-attachments/assets/8a1cec4b-6224-4551-bc9b-85d11d0f8e77)
 
+Right-click on the networking tab and select ‘Open Network & Internet Settings’ for Network Connections to open
+![image](https://github.com/user-attachments/assets/6cd17418-0dd0-4881-a58b-c75882a00efb)
 
+On the network status, select ‘Change Adapter options’
+![image](https://github.com/user-attachments/assets/00616806-2ac3-4df2-9165-eb06deb5914d)
 
+Right-click on Ethernet and select properties. After that, double click on ‘Internet Protocol Version 4 (TCP/IPv4)’
+![image](https://github.com/user-attachments/assets/7a58a00b-dbe0-40c5-886c-20a0e8dbb6bd)
 
+# Static IP:
+![image](https://github.com/user-attachments/assets/fc204ce4-f934-4308-9b33-6779c0eecb64)
 
+Splunk:
+Access the splunk server on windows using the IP address from the splunk server. IP address: 192.168.10.10:8000
+![image](https://github.com/user-attachments/assets/1792bfe8-de5e-4d7a-8a6e-90a362d710a9)
 
+Install splunk universal forwarder:
+Go to Product again and click on Free Trials & Downloads. Scroll down to Universal Forwarder and click on download.
+![image](https://github.com/user-attachments/assets/e1fd38be-31c3-4d07-8dc0-6d2bc3fa406d)
 
+Once inside, click on the windows download to download.
+![image](https://github.com/user-attachments/assets/d85580ff-c5dd-4afe-96a8-3449edf99947)
 
+After downloading Splunk Universal Forwarder, go to downloads on your PC and double click on it.
+![image](https://github.com/user-attachments/assets/6b3e9cf2-c0eb-4609-a0fc-71ec83178e7a)
 
+Username: admin and click next
+![image](https://github.com/user-attachments/assets/d389c9f6-8ffc-4fe3-a807-044df72c75df)
+![image](https://github.com/user-attachments/assets/3a3946b7-f840-4256-bbb1-d5eb54c7f365)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Click Install
 
 
 
