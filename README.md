@@ -59,9 +59,14 @@ You will have a file that looks like this below, open it and ‘double-click’ 
 Both login and password is kali/kali as default. 
 ![image](https://github.com/user-attachments/assets/068c7750-4643-4136-aa89-2919632aabc7)
 
+We are in Kali, Success!
+![image](https://github.com/user-attachments/assets/f4fd5890-18cc-48e4-ab61-bfd54a727ee0)
 
-
-
+# Let’s download and install Windows Server 22:
+  Go to google.com and type in windows server 22. It will take you to this Microsoft page
+![image](https://github.com/user-attachments/assets/42b54d9c-6532-481c-90b3-c38f49fe04de)
+Make your way down and click on ‘Download the ISO’ and you will see a registration form to fill out and go ahead and fill it out your credential. I have already downloaded windows server 22.
+![image](https://github.com/user-attachments/assets/76a6aa5b-965d-4505-903c-8fc009334523)
 
 
 
