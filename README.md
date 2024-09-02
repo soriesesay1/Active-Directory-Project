@@ -11,6 +11,13 @@ We learn how to draw the diagram for our lab (project) using a site name draw.io
 Diagram:
 ![image](https://github.com/user-attachments/assets/490b2a59-f539-4648-a02e-5e9c258e66f9)
 
+# Part 2:
+We spend time on how to download and install our virtual machines in VirtualBox. Machines included:
+-Windows Server 2022
+-Windows 10
+-Kali Linux
+-Ubuntu Server (Splunk)
+VirtualBox Settings
 
 
  
