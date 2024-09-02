@@ -67,15 +67,29 @@ We are in Kali, Success!
 ![image](https://github.com/user-attachments/assets/42b54d9c-6532-481c-90b3-c38f49fe04de)
 Make your way down and click on ‘Download the ISO’ and you will see a registration form to fill out and go ahead and fill it out your credential. I have already downloaded windows server 22.
 ![image](https://github.com/user-attachments/assets/76a6aa5b-965d-4505-903c-8fc009334523)
+After the download, let’s install it in virtualbox. Since we are following MyDFIR, we want to leave everything as default
+![image](https://github.com/user-attachments/assets/519d356a-3c2f-4848-8de3-21ba32f93dec)
+![image](https://github.com/user-attachments/assets/0c8b1fb2-92cd-48b7-9e8d-48cd810084ae)
+![image](https://github.com/user-attachments/assets/50f1ad60-82de-459e-956d-929933604c3d)
 
+We have a windows like this, click Next and Install. 
+![image](https://github.com/user-attachments/assets/e402b624-13d1-481b-8c23-4f595408502c)
+![image](https://github.com/user-attachments/assets/65e84250-f6a1-4c6c-aca6-9c8e59bf68cc)
+For the operating system, select the ‘Standard Evaluation Desktop Experience’ for a better window and click Next.
+![image](https://github.com/user-attachments/assets/2c8530ac-3b6e-4188-ada5-204edf340dd9)
+Installation type, we select ‘Custom’ and click next.
+![image](https://github.com/user-attachments/assets/654a1aaf-4b13-417e-bffc-6583fa183677)
+Wait for the installation to complete
+![image](https://github.com/user-attachments/assets/6323bcf5-afc8-4b45-b54c-cb771a2690e2)
+Enter your password as admin and click finish
+![image](https://github.com/user-attachments/assets/f7b4c517-4a5a-4de0-99d2-33551d5bf152)
+You will have a window with no way to open it. On the top, click on Input, Keyboard, and select ‘Insert Ctrl+Alt+Delete’ which will let you put in your password. 
+![image](https://github.com/user-attachments/assets/e158b79c-e70e-4b89-a405-ed94a52d3ad3)
+![image](https://github.com/user-attachments/assets/3982da3c-c64a-42fb-ad58-b6dcb1ec9f0c)
 
-
-
-
-
-
-
-
+# Install Ubuntu Server (Splunk):
+  To download Ubuntu Server, go to ubuntu.com, hover your cursor over ‘products’ and select Ubuntu Server. Once you are in, click ‘Download Ubuntu Server.’ I have already downloaded it. 
+ 
 
 
 
