@@ -29,4 +29,43 @@ Click finish!
 # After setting our windows in virtual box, you will click start on the top right and wait for the windows to finish powering up. You will see a window like this below, click Next, and click Install. In the activate windows click on “I don’t have a product key” In the       windows setup, select “Windows 10 Pro” and click Next. Select ‘Custom: Install Windows on (advanced)’ and Next and wait for the installation to complete. 
 
 ![image](https://github.com/user-attachments/assets/eb1e4c1a-8042-4c86-97de-aaf83ec25c91)
+![image](https://github.com/user-attachments/assets/0ff3e1ef-6f32-4ff0-98fd-974f76a1afc5)
+![image](https://github.com/user-attachments/assets/4347dc42-76eb-4449-b6fa-f641f90b7e2a)
+![image](https://github.com/user-attachments/assets/2f706af0-07be-4cc5-a482-453ea274ff42)
+![image](https://github.com/user-attachments/assets/1556afc6-00dc-449f-a0a9-3b9f68d0ae71)
+![image](https://github.com/user-attachments/assets/e538f372-da3c-4b80-bc41-4b88f204c4ae)
+
+Setup windows for personal use and click Next. Windows will ask you for your email before you login and suggestion is for you to click ‘create account’ which will let you just create your name for the machine and a password. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
