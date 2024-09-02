@@ -26,6 +26,7 @@ For the virtual hard disk, 50.00GB should be fine.
 Click finish!
 ![image](https://github.com/user-attachments/assets/bc0b2c37-9797-4df9-8f36-f5c3eb8799f0)
 
+# After setting our windows in virtual box, you will click start on the top right and wait for the windows to finish powering up. You will see a window like this below, click Next, and click Install. In the activate windows click on “I don’t have a product key” In the       windows setup, select “Windows 10 Pro” and click Next. Select ‘Custom: Install Windows on (advanced)’ and Next and wait for the installation to complete. 
 
-
+![image](https://github.com/user-attachments/assets/eb1e4c1a-8042-4c86-97de-aaf83ec25c91)
 
