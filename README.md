@@ -37,8 +37,14 @@ Click finish!
 
 Setup windows for personal use and click Next. Windows will ask you for your email before you login and suggestion is for you to click ‘create account’ which will let you just create your name for the machine and a password. 
 
+![image](https://github.com/user-attachments/assets/be2ca5fc-a947-4e3e-9909-da1962a18b79)
+![image](https://github.com/user-attachments/assets/22fa002a-b675-4cdd-a82b-e4d245e228c1)
+![image](https://github.com/user-attachments/assets/efdb4085-3d10-4b19-b037-899b07abdf35)
+![image](https://github.com/user-attachments/assets/7fc90a1f-4f07-4988-98da-238283ddd887)
+![image](https://github.com/user-attachments/assets/be2c12ac-e7d2-4be4-ae7d-97f2a20418cf)
 
-
+# Install Kali:
+We go to kali.org, click on virtual machines, 
 
 
 
