@@ -219,21 +219,34 @@ After downloading Splunk Universal Forwarder, go to downloads on your PC and dou
 Username: admin and click next
 ![image](https://github.com/user-attachments/assets/d389c9f6-8ffc-4fe3-a807-044df72c75df)
 ![image](https://github.com/user-attachments/assets/3a3946b7-f840-4256-bbb1-d5eb54c7f365)
-
 Click Install
 
+# Sysmon Installation:
+  Go to google.com and type Sysmon. Click on Sysmon-Sysinternals and click Download Sysmon
+![image](https://github.com/user-attachments/assets/f0cf5869-cfd2-434a-b3a6-4bb94ffc2e78)
+![image](https://github.com/user-attachments/assets/b4ecca1b-9e7a-4638-ac08-10315fdb5c69)
+![image](https://github.com/user-attachments/assets/4ce5e009-bf3a-4172-b68d-e065cf73c948)
 
+We download the RAW page from github.com and save it to our downloads
+![image](https://github.com/user-attachments/assets/79a90f84-cf12-4f4f-a25a-d472d305c584)
 
+We open PowerShell with administrative rights to run and install Sysmon 
+![image](https://github.com/user-attachments/assets/84b849b7-4bf5-47a0-8a82-996f48526b2c)
 
+We cannot rename the default file ‘input.conf’ in the system of splunk universal forwarder, so we wrote a script in ‘Notepad with admin rights’ and save the file in the local instead of default.
+![image](https://github.com/user-attachments/assets/06cca9f2-6936-412a-bcff-b2d8395d801d)
 
+We Restart and Start the Splunk Forwarder in Services for the script to work, and change the account to local 
+![image](https://github.com/user-attachments/assets/f34a8290-6d23-40e8-b301-c815204c2503)
+![image](https://github.com/user-attachments/assets/d8a018c0-d7f4-469a-8505-b4281047c568)
 
+# Our Splunk Portal:
+![image](https://github.com/user-attachments/assets/4dcd93ec-88f4-48aa-a299-d710426d54a6)
 
+We go to Settings at the top and click Indexes for the input.conf ‘EventsLog’ called endpoint we created.
+![image](https://github.com/user-attachments/assets/75a57a45-587b-4499-ab88-36c24f927f6d)
 
-
-
-
-
-
+We create new index because we did not see our scripted index
 
 
 
