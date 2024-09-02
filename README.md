@@ -7,7 +7,10 @@ In this lab, we will learn how to set up Splunk, Kali Linux, and Atomic Red Team
 
 # Part 1:
 We learn how to draw the diagram for our lab (project) using a site name draw.io and below is the outcome.
+
 Diagram:
-![image](https://github.com/user-attachments/assets/a6a685c9-bc29-44ec-bba6-3f8a25237873)
+![image](https://github.com/user-attachments/assets/490b2a59-f539-4648-a02e-5e9c258e66f9)
+
+
 
  
