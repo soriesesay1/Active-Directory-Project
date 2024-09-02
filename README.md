@@ -246,10 +246,6 @@ We Restart and Start the Splunk Forwarder in Services for the script to work, an
 We go to Settings at the top and click Indexes for the input.conf ‘EventsLog’ called endpoint we created.
 ![image](https://github.com/user-attachments/assets/75a57a45-587b-4499-ab88-36c24f927f6d)
 
-We create new index because we did not see our scripted index
-
-
-
 
 
 
