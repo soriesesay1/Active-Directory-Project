@@ -45,14 +45,19 @@ Setup windows for personal use and click Next. Windows will ask you for your ema
 
 # Install Kali:
 We go to kali.org, click on virtual machines, 
+![image](https://github.com/user-attachments/assets/bd39bff7-703a-4233-8714-d14431454138)
 
+On the Pre-built Virtual Machines, select anyone and for this lab I select VirtualBox because my computer is 64 bits.
+![image](https://github.com/user-attachments/assets/bad8f006-3fcf-49b2-ab72-b19ea72135c8)
 
+After the download, you will have a ‘zip file’ like this below and ‘right-click’ to extract all.
+![image](https://github.com/user-attachments/assets/1dc99593-98e6-45a9-a0cd-2cb1428c4897)
 
+You will have a file that looks like this below, open it and ‘double-click’ on the ‘blue’ kali which will take you directly to virtualbox and click start with no settings require because it’s per-built.
+![image](https://github.com/user-attachments/assets/b59fbfe3-63b1-46cb-bb2b-e051d15cf90a)
 
-
-
-
-
+Both login and password is kali/kali as default. 
+![image](https://github.com/user-attachments/assets/068c7750-4643-4136-aa89-2919632aabc7)
 
 
 
