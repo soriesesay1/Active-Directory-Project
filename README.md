@@ -89,7 +89,191 @@ You will have a window with no way to open it. On the top, click on Input, Keybo
 
 # Install Ubuntu Server (Splunk):
   To download Ubuntu Server, go to ubuntu.com, hover your cursor over ‘products’ and select Ubuntu Server. Once you are in, click ‘Download Ubuntu Server.’ I have already downloaded it. 
- 
+![image](https://github.com/user-attachments/assets/f71ce22e-a141-41e3-b718-074b4cf31cf3)
+![image](https://github.com/user-attachments/assets/d81ea93e-cf9a-4a4a-992c-e69b573e3cc8)
+
+Your screen will look like this once you click on download
+![image](https://github.com/user-attachments/assets/6a883b62-61be-4a03-bbc7-6fa95f730ade)
+After the download is completed, we go to virtualbox for installation
+![image](https://github.com/user-attachments/assets/7960c037-225f-4f08-952d-6daea4e2f0e7)
+![image](https://github.com/user-attachments/assets/6bc1c5a6-07da-409f-8391-fcd1aeffe9ba)
+You can increase this depending your space/gigs on your computer
+![image](https://github.com/user-attachments/assets/a702b9d7-769e-4e8e-8d79-d10db32be40d)
+![image](https://github.com/user-attachments/assets/7aa9cdfd-9631-420e-a06e-a48246bd5cf0)
+
+After the download and installation, now let’s configure our server. Follow the default instructions/green line
+![image](https://github.com/user-attachments/assets/76373ee3-088f-41ba-b9f5-40468dc297c0)
+![image](https://github.com/user-attachments/assets/6303c8a5-fc52-425d-9aba-1e0064cf4ba0)
+![image](https://github.com/user-attachments/assets/c6ef0fcc-bfeb-48c2-8fc6-9ed82694942e)
+![image](https://github.com/user-attachments/assets/58668297-8324-454e-acc3-b8f9ede81a3d)
+![image](https://github.com/user-attachments/assets/6d6fbb6c-61c9-45a6-9f6a-9da2198d6f07)
+![image](https://github.com/user-attachments/assets/ea5cbda7-4635-46ca-8e20-0e2079d57fbb)
+![image](https://github.com/user-attachments/assets/087202f9-cb9d-44f0-aacf-83ff4c92e1cf)
+
+Use the down arrow and hit enter
+![image](https://github.com/user-attachments/assets/5b066102-9da4-4a3e-9aaf-fa629eca4c6b)
+Your storage configuration will look like this below and click done.
+![image](https://github.com/user-attachments/assets/e4738388-e190-428b-9e2e-e597eaf7ec6a)
+Use the down arrow to click on continue below.
+![image](https://github.com/user-attachments/assets/6014340f-c6ad-454b-906a-eddf1cfbe210)
+
+Profile setup
+![image](https://github.com/user-attachments/assets/fe776e8c-bab7-478b-aef2-0b6f37281d1e)
+OpenSSH Server is OPTIONAL if you want.
+![image](https://github.com/user-attachments/assets/27357e8b-b99b-4193-ac18-6d88da611daf)
+Same for these below, OPTIONAL if you want to install any.
+![image](https://github.com/user-attachments/assets/26fe675d-1d4c-40e6-a757-ad3a4c757e74)
+Give the installation time to complete. Reboot when you see ‘Reboot Now’
+![image](https://github.com/user-attachments/assets/c3802d56-00a4-4c5c-afb1-7f80f1645f2c)
+![image](https://github.com/user-attachments/assets/760a0f44-c5f5-43ff-b61c-b2c5881aa1ed)
+
+Once login using your password, update the server with ‘sudo apt-get update && sudo apt-get upgrade -y’ and click enter for the update to proceed. Type your password
+![image](https://github.com/user-attachments/assets/d2f11864-ae3d-400d-a0fb-dec3489e83ae)
+
+![image](https://github.com/user-attachments/assets/f1610546-9fe1-442c-b138-eb2adbde9a41)
+
+Part 3:
+We install and configure our softwares: Sysmon(Use for login purpose), Splunk(For alerts and telementry) as the most important of them all. 
+![image](https://github.com/user-attachments/assets/031f6220-2150-4356-b0ba-2d3bcfe7bd9b)
+
+We put our network on the same network, select tools on the top and click on the 3 dots top right, and select network. In the ‘network’ select ‘NAT Networks’ and click on create and change the IP address.
+![image](https://github.com/user-attachments/assets/d19a7774-cc22-43d5-b30f-77951e2f6314)
+In virtualbox, we change the network from NAT to NAT Networks for Splunk and the rest of the machines.
+![image](https://github.com/user-attachments/assets/d89ef5c6-0689-4483-a824-77f5f57248d4)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
