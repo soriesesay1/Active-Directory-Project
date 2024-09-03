@@ -246,89 +246,219 @@ We Restart and Start the Splunk Forwarder in Services for the script to work, an
 We go to Settings at the top and click Indexes for the input.conf ‘EventsLog’ called endpoint we created.
 ![image](https://github.com/user-attachments/assets/75a57a45-587b-4499-ab88-36c24f927f6d)
 
+We create new index because we did not see our scripted index
+![image](https://github.com/user-attachments/assets/f1e31c35-62f4-4eac-be12-a6fcba5f0f48)
 
+We enable our Splunk Server to receive data by clicking on Settings and Forwarding and receiving
+![image](https://github.com/user-attachments/assets/176f58f0-7083-47f5-acae-b83e5207a6a6)
 
+Click configure under Receive Data and click on New receiving Port at the top right
+![image](https://github.com/user-attachments/assets/e24b239a-e6d3-4b35-ba02-6305703a3afd)
+![image](https://github.com/user-attachments/assets/d29d4381-0442-4eeb-b681-0663ea1dcdaf)
 
+Default = 9997 and Save
+![image](https://github.com/user-attachments/assets/402b9bd4-f2bb-4820-93d0-093cfd064a03)
+![image](https://github.com/user-attachments/assets/d86fd9d7-5e14-4bf4-9a9a-b3e0d0f15861)
 
+To see if data coming in from our target machine, click on Apps, and select Search & Reporting
+![image](https://github.com/user-attachments/assets/9aff9040-331b-4a81-bdf0-a05fb3e40c8f)
 
+Type in ‘index=endpoint’ and click on search
+![image](https://github.com/user-attachments/assets/aad4cbc6-4965-4fc4-bd88-a3fe2f08e1c1)
 
+We see some events and 1 host machine which is our machine (target-PC)
+![image](https://github.com/user-attachments/assets/aa948a52-cfa3-4abe-bf37-c21d027031f1)
 
+Our input.conf files
+![image](https://github.com/user-attachments/assets/069e2f38-b1fb-4b4f-a5f1-4bd2b95bc2dc)
+We successfully install & configure Sysmon and Splunk. Success!
 
+# Part 4:
+Is to install and configure Active Directory on our Windows 22 Server and move it to a domain controller and configure the target machine to join our new domain.
+![image](https://github.com/user-attachments/assets/2bfea06b-01a0-4992-a593-b6889ca924a1)
 
+We give our windows server 22 a static IP and press okay to save it
+![image](https://github.com/user-attachments/assets/c449479f-75b5-49ec-8f3a-bbdabb8dc135)
 
+Open the command prompt to verify the IP address has been change and ping google.com to verify we have a connection. We also ping our splunk server to know if we have a connection.
+![image](https://github.com/user-attachments/assets/613dc76c-b5d6-4095-a2f8-2e29031d27df)
 
+Now we add our roles by clicking on Manage at the top. Follow the steps below.
+![image](https://github.com/user-attachments/assets/fc6f01fd-9696-4748-94cd-a191a65ab486)
+![image](https://github.com/user-attachments/assets/e0b23319-eb9f-4a73-b360-7ce5781ae5cf)
+![image](https://github.com/user-attachments/assets/89cf04ba-0ace-4989-809f-9c574d7042c2)
 
+Select Active Directory Domain Services and click on Add Features
+![image](https://github.com/user-attachments/assets/70789f9f-578c-4960-a376-9eb63845368d)
+![image](https://github.com/user-attachments/assets/41bacd13-3ac3-4308-8ae0-2f2fbd484818)
 
+Click next until install and close when the installation is complete.
+![image](https://github.com/user-attachments/assets/d63b0cbb-2702-451a-b9d9-69e41e93594e)
 
+Click on the flag at the top and select ‘Promote this server to a domain controller.’ In the deployment configuration, select ‘Add a new forest’ because we are creating a new domain
+![image](https://github.com/user-attachments/assets/44033c76-b531-49ff-9b59-034eded70a3f)
+![image](https://github.com/user-attachments/assets/ccd1573d-fc69-4ba5-86ad-5f493b963047)
 
+Leave everything on default except for password creation and click next.
+![image](https://github.com/user-attachments/assets/cd596c45-582d-4de5-9db5-d74a07a83fb9)
+![image](https://github.com/user-attachments/assets/d2ea3fb1-2ae4-4002-a165-a995793a36ad)
+![image](https://github.com/user-attachments/assets/904a8464-d70a-4d72-a380-dfd7dfee9779)
 
+After Prerequisite Check, click Install. And the server will automatically restart. 
+![image](https://github.com/user-attachments/assets/24040a42-762d-4c95-9ff1-a81b3608fc58)
 
+Login to the server we just created, and it may look like this below. This shows our server was a success!
+![image](https://github.com/user-attachments/assets/c5b08b74-7cde-4a54-91dc-66e956830a27)
 
+# Create Users on our Domain:
+On Tools, select Active Directory Users and Computers
+![image](https://github.com/user-attachments/assets/fc7a87e2-73e8-4897-879c-38072da528a0)
+![image](https://github.com/user-attachments/assets/ad573925-2c04-474d-a1bb-8b9cb125549b)
 
+In our local domain, we created an ‘Organizational Unit’ for IT & HR and added Users in both. To do this, you have to right click on your local domain.
+![image](https://github.com/user-attachments/assets/2d75e696-804b-4ecb-8823-66e4d9f637ca)
+![image](https://github.com/user-attachments/assets/9cb47470-9cd9-46d3-b42c-a623069e3cc7)
 
+After setting up our Active Directory and the server is now a domain controller, we must now join our windows target machine into our new domain called dcyber.local and authenticate using one the Users.
 
+On our target machine ‘windows 10’ search for This PC and click on Properties. In properties, scroll down to Related Settings and click on Advanced System Settings. Inside system, click on Computer Name and select change. Inside Computer Name/Domain Changes, select Domain and type in our domain (dcyber.local)
 
+![image](https://github.com/user-attachments/assets/f561eb0a-7d1d-436b-9db1-f3b579f49af0)
+![image](https://github.com/user-attachments/assets/71767002-7d91-4b26-b313-e7026086f315)
 
+We have an error and to fix this, we go to our network settings
+![image](https://github.com/user-attachments/assets/c52a667b-357f-4579-8d9e-b09368399467)
 
+In the network settings, select Change adapter options, right click on the Ethernet, select properties and double click on Internet Protocol Version 4 (TCP/IPv4)
+![image](https://github.com/user-attachments/assets/f28a97a5-10b8-42fa-9531-631026e15890)
 
+Our DNS was set to google and that’s the reason for the error. We change it to our domain DNS and click
+![image](https://github.com/user-attachments/assets/7bfc658c-ab8b-4089-a989-4bc2182a3554)
 
+Verify everything went well by typing cmd (command prompt) and inside type ipconfig space /all and hit enter. This shows our DNS is on our domain.
+![image](https://github.com/user-attachments/assets/103679d5-6ad4-4374-bd98-b07a9a026121)
+Success! We are able to join our domain. Username type administrator and the password you used. You will be prompted to restart the computer
 
+![image](https://github.com/user-attachments/assets/4ae6f29a-3919-49f1-a38e-4c4f52af39ff)
+![image](https://github.com/user-attachments/assets/988dcc79-8738-4464-8fa4-229b824d9a21)
 
+To make sure everything is correct, we have to sign in with our User (jsmith) that we created in the .local domain. Verify you are signing in to your domain (dcyber)
+![image](https://github.com/user-attachments/assets/959f885b-b3c8-49b6-bb84-b3985f7bc3d2)
+Success! We created 2 Users and configure Active Directory.
 
+# Part 5 Final:
+We learn how to use Kali Linux to perform a brute force attack on our users in Active Directory and use splunk to query the activities. We also learn how to install Atomic Red Team to run a test and generate telemetry to detect similar attacks in the future
 
+# Power Up Kali:
+![image](https://github.com/user-attachments/assets/3dd07288-09a1-429a-accd-8c6d7f1f18af)
 
+We learn how to setup a static IP address in Kali Linux to 192.168.1.2 just like in the diagram. To do that, we right click the ethernet connection at the top and click ‘Edit Connections’
+![image](https://github.com/user-attachments/assets/6df6a55a-f206-4bbb-b6fa-2fb54adfeb3d)
 
+Select the Wired connection 1 and click settings below. Select IPv4 Settings and below where it says Automatic (DHCP) change it to Manual and click Add to enter the IP address and save.
+![image](https://github.com/user-attachments/assets/020482e5-345b-4824-b35e-73455a253651)
 
+Right click on the desktop and select Open Terminal Here, type in ip a and enter to verify the static IP 
+![image](https://github.com/user-attachments/assets/5acb79b3-7703-475a-8a22-b83444bb20ab)
 
+If the IP didn’t change, disconnect the internet and reconnect it again. We ping google for connections.
+![image](https://github.com/user-attachments/assets/55f33e3f-e761-4f07-8464-8e21137e1409)
 
+Ping our splunk server for connection:
+![image](https://github.com/user-attachments/assets/1f52ef62-43cd-47bb-940d-c655d41bca4a)
 
+Update our kali:
+![image](https://github.com/user-attachments/assets/4e8d65e5-793c-43ed-a9f5-9b32be86c8a1)
 
+We are creating a directory on our desktop for all our files 
+![image](https://github.com/user-attachments/assets/b18cee0d-879a-4ded-8de8-b2d280e35487)
 
+We install crowbar to perform brute force attacks
+![image](https://github.com/user-attachments/assets/889a2d92-4184-4cb8-b833-bc34a18861a6)
+![image](https://github.com/user-attachments/assets/540d2785-7779-4409-8bfe-637613a100a4)
 
+We unzip rockyou file and copy it to our desktop 
+![image](https://github.com/user-attachments/assets/51ed5708-8302-4dc8-adef-21fc2af1745d)
+![image](https://github.com/user-attachments/assets/c6ee56dc-855f-4a75-ac57-e1db30e25023)
+![image](https://github.com/user-attachments/assets/3d39732f-4692-4f32-a891-97bd86319e49)
 
+To enable remote desktop in our target machine and make sure the ADministrator is type like this. After that, go to the Remote tab and select ‘Allow remote connections to this computer’ and click Select Users. Click Add in the Remote Desktop Users and type in the Users we created before, just like this
+![image](https://github.com/user-attachments/assets/37d5f57c-ce60-4695-92b8-bb74ac0341f0)
 
+After that, click on okay, Okay, and Apply and Okay.
+![image](https://github.com/user-attachments/assets/65ce31e7-2cd6-49d6-a4e8-b1b731a0379e)
 
+Here we are testing our Remote Desktop Access to one of our User with a specific IP target.
+![image](https://github.com/user-attachments/assets/d205557f-c5a7-47d1-98eb-b7c30a9b1923)
 
+# For some reason, mine didn’t get the password from the User. We are going to splunk to see if we generate any telemetry.
 
+In splunk, select Search & Reporting and type in index=endpoint tsmith and select last 15 minutes
+![image](https://github.com/user-attachments/assets/b7cd8cdc-65cc-414a-90df-ffa58992d827)
 
+After the search, we notice that we have 21 events generate.
+![image](https://github.com/user-attachments/assets/8ef51e46-68c6-445a-8ff3-ec3fe0eb4e85)
 
+We have 1 EventCode during our attempted rdp (Remote Desktop Attempt) and the value is 4625 and count is 21. 
+![image](https://github.com/user-attachments/assets/78997240-0349-4c81-b6aa-57adae36d0fc)
 
+4625 means a failed log on ID when we google it. 21 means 21 attempt to log on.
+![image](https://github.com/user-attachments/assets/ebfc4cc2-29ac-40fd-8f22-edfac6901e12)
+![image](https://github.com/user-attachments/assets/1cb0b77c-94ff-47ce-9eb6-8cdc46a3ef70)
 
+For some reason we didn’t have any Events for the last 15 minutes and we try the 60 minutes and we do have query.
+![image](https://github.com/user-attachments/assets/21d0de2a-3a2a-4f54-879e-692f5523207a)
 
+We try EventCode 4624 and we have no query meaning there was no successful log on.
+![image](https://github.com/user-attachments/assets/71294a48-f9b1-4876-936f-dff56eb89230)
 
+Inside our query, we check to see who and where was the log on attempts coming from and their IP
+![image](https://github.com/user-attachments/assets/781524a3-6a35-4301-9dfd-861036436418)
 
+Now we install Atomic Red Team on our Attack machine using PowerShell. To do that we type PowerShell on the search bar and run as an administrator to open. 
+![image](https://github.com/user-attachments/assets/3825c564-d807-4d97-a2a9-0a68472325ac)
 
+You will be asked for the Administrator account and password.
+![image](https://github.com/user-attachments/assets/558e7726-b193-4e3a-8aaf-0bec998c2827)
 
+Before we install the atomic framework, we need to exclude the entire C drive because Microsoft Defender might stop us and not let the complete package to install. To do that, we go Windows Security and click on Virus & threat Protection, inside click on Virus & threat Protection manage settings
+![image](https://github.com/user-attachments/assets/187add8b-3b82-4e22-8610-dd54d73bd0f0)
 
+Scroll down and under Exclusions, click on ‘Add or remove exclusion’ and for some reason, I was asked to sign in with my administrator privileges. 
+![image](https://github.com/user-attachments/assets/e40c2c79-5ca6-495f-b0fe-e3c790852ffc)
 
+Inside Exclusions, click on Add an exclusion and select folder. Inside, click on This PC and select Local Disk (C)
+![image](https://github.com/user-attachments/assets/2e06c924-6347-4648-bd43-f9b9bd46a508)
+![image](https://github.com/user-attachments/assets/c383a709-3e64-4c02-9b40-115a21243082)
 
+It will look like this below.
+![image](https://github.com/user-attachments/assets/2c5ca3b9-30ef-4eb0-a1fc-351c967f0ebc)
 
+Now we go back to PowerShell to install Atomic Red Team. There were some roadblocks, but we fix it
+![image](https://github.com/user-attachments/assets/c788b2c9-184a-4aa0-b127-d45b4771bb87)
+![image](https://github.com/user-attachments/assets/1848a723-22d7-4c67-8ecc-41e0df8230a5)
 
+# All these codes are in the MITRE Attack frame to give us a clear understanding of what we are doing, just hover above them. 
+For Example: T1136.001, T1136.002, T1136.003 in Atomic Red Team
+In MITRE Attack: T1136.001 is a Local Account, T1136.002 is a Domain Account, and T1136.003 is a Cloud account. 
+![image](https://github.com/user-attachments/assets/544e5a31-ed6c-4786-b011-9cec53288687)
+![image](https://github.com/user-attachments/assets/454f4e8e-155f-4d0e-9084-797f2918a577)
 
+We Invoke T1136.001 and the result is below. This also will generate telemetry because of the local account created.
+![image](https://github.com/user-attachments/assets/fd17cb9d-e629-4175-aad1-89954dc40b46)
 
+In splunk, we have a telemetry that generate event codes from our atomic red team created using PowerShell. This shows we can see any local account created in our system/computer.
+![image](https://github.com/user-attachments/assets/158a26fe-fce7-465a-a0d4-9da007cd31fd)
 
+Another Example: - T1059 which is Command and Scripting Interpreter
+![image](https://github.com/user-attachments/assets/2d91139e-7971-4478-805d-9707c363ba7c)
 
+From the look of things, it looks like Windows Defender is picking up the T1059.001 PowerShell. We did see 209 events of PowerShell in our splunk for the last 15 minutes
+![image](https://github.com/user-attachments/assets/6ba3ad69-aab0-49b4-a649-69ba25f5152f)
+![image](https://github.com/user-attachments/assets/e97b364e-7d3b-47da-a57d-d9fc86a655d4)
 
+Congratulations dcyber! You have successfully completed the Active Directory Project!
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+A Big Thank You to MyDFIR on YouTube for this project. I appreciate you alot!  
 
 
